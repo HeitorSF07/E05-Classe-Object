@@ -11,12 +11,26 @@ public class PessoaFisica extends Cliente{
     }
     public String toString(){
         String dadosPF ="Nome: "+ getNome()+
-        "CPF: "+ cpf+
-        "Endereço: "+ getEndereco()+
-        "Idade: "+ idade+
-        "Sexo: "+ sexo;
+        "\tCPF: " + cpf+
+        "\tEndereço: "+ getEndereco()+
+        "\tIdade: "+ idade+
+        "\tSexo: "+ sexo;
         return dadosPF;
     }
+
+    public boolean equals(Object object){
+        if(object instanceof PessoaFisica){
+            PessoaFisica pf = (PessoaFisica) object;
+            if(this.cpf.equals(pf.cpf)){
+                return true;
+            }else{
+                return false;
+            }
+        }else{
+            return false;
+        }
+    }
+
     public void setCpf(String cpf){
         this.cpf = cpf;
     }

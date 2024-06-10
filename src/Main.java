@@ -5,29 +5,12 @@ public class Main {
         Conta contaF1 = new Conta(1234, F1, 5000, 2000);
 
 
-        contaF1.depositar(3000);
-        contaF1.depositar(2000);
-        contaF1.depositar(2000);
-        contaF1.depositar(2000);
-        contaF1.depositar(2000);
-        contaF1.depositar(2000);
-        contaF1.depositar(2000);
-        contaF1.depositar(2000);
-        contaF1.depositar(2000);
-        contaF1.depositar(2000);
-        contaF1.depositar(2000);
-        contaF1.depositar(2000);
-        contaF1.depositar(2000);
-        contaF1.depositar(2000);
-        contaF1.depositar(2000);
         contaF1.depositar(2000);
         contaF1.depositar(2000);
         contaF1.sacar(500);
 
         contaF1.imprimirExtrato();
-
-        int media = Operacao.getTotalOperacoes() / Conta.getTotalContas();
-        System.out.println("Média de operações por conta aberta: " + media);
-
+        System.out.println(F1.toString());
+        System.out.println(contaF1.toString());
     }
 }

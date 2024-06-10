@@ -36,9 +36,6 @@ public class Operacao {
         Operacao.totalOperacoes++;
     }
 
-    void imprimir() {
-        System.out.println(getTipo() + "\t" + getValor() + "\t" + getData());
-    }
 
     public Date getData() {
         return data;

@@ -73,19 +73,32 @@ public class Conta {
     }
 
     public String toString() {
-        String dados= "===== Conta " + this.numero + " ====="+"Dono: " + this.dono.getNome()+ "Saldo: " + this.saldo +
-        "Limite: " + this.limite+ "====================";
+        String dados= "===== Conta: " + this.numero + " ====="+"\nDono: " + this.dono.getNome()+ "\nSaldo: " + this.saldo +
+        "\nLimite: " + this.limite+ "\n====================";
         return dados;
     }
 
     public void imprimirExtrato() {
-        System.out.println("======= Extrato Conta " + this.numero + "======");
+        System.out.println("======= Extrato Conta: " + this.numero + " ======");
         for(Operacao atual : this.operacoes) {
             if (atual != null) {
-                atual.imprimir();
+                System.out.println (atual.toString());
             }
         }
         System.out.println("====================");
+    }
+
+    public boolean equals(Object object){
+        if(object instanceof Conta){
+            Conta Cnt= (Conta) object;
+            if(this.numero == Cnt.numero){
+                return true;
+            }else{
+                return false;
+            }
+        }else{
+            return false;
+        }
     }
 
     public int getNumero() {

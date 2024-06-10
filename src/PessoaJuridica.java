@@ -17,6 +17,20 @@ public class PessoaJuridica extends Cliente{
         "Quantidade de Funcionários: "+ quantFuncionarios;
         return dadosPJ;
     }
+
+    public boolean equals(Object object){
+        if(object instanceof PessoaJuridica){
+            PessoaJuridica pj = (PessoaJuridica) object;
+            if(this.cnpj.equals(pj.cnpj)){
+                return true;
+            }else{
+                return false;
+            }
+        }else{
+            return false;
+        }
+    }
+
     public void setCnpj(String cnpj){
         this.cnpj = cnpj;
     }
